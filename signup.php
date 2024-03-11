@@ -18,6 +18,10 @@ if (isset($_POST['submit'])){
     echo "Alamat : $alamat <br>";
     echo "Handphone : $handphone <br>";
     echo "Jenis Kelamin : $jeniskelamin <br>";
+
+    echo '<script>
+window.location = "login.php";
+</script>';
 }else{
 
 
@@ -46,7 +50,12 @@ if (isset($_POST['submit'])){
             Jenis Kelamin: <input type = "radio" name = "kelamin" value="Laki-Laki">Laki-Laki
             <input type = "radio" name = "kelamin" value="Perempuan">Perempuan
             <br>
-            <input type = "submit" name = "submit" value="Save">
+            <script type = "text/javascript">
+                function signup(){
+                    alert("SIGN UP BERHASIL!!");
+                }
+            </script>
+            <input type = "submit" name = "submit" value="Save" onclick="signup()"/> 
             <input type = "reset" name = "reset" value="Cancel">
         </form>
     </body>
@@ -54,3 +63,4 @@ if (isset($_POST['submit'])){
 <?php
 }
 ?>
+
